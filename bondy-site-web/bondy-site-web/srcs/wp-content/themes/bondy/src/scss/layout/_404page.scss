@@ -1,0 +1,129 @@
+.branding-container{
+    margin-top: 15px;
+}
+.branding{
+    @include min(320px){
+        max-width: 110px;
+    }
+    @include min(596px){
+        max-width: 130px;
+    }
+    @include min(1200px){
+        max-width: 173px;
+    }
+}
+.error-title,
+.error-desc,
+.left-error,
+.copyright{
+    font-family: 'quicksand';
+}
+.error-title{
+    font-weight: bold;
+    color: $brown-2; 
+    text-align: center;
+    @include min(320px){
+        font-size: 40px;
+        // height: 49px;
+        margin: 0px 0 19px 0;
+    }
+    @include min(596px){
+        font-size: 50px;
+        // height: 60px;
+        margin: 0px 0 29px 0;
+    }
+    @include min(1200px){
+        font-size:70px;
+        // height: 88px;
+        margin: 0px 0 49px 0;
+    }
+}
+.picture-error{   
+    max-height: 279px;
+    max-width: 759px; 
+    @include min(320px){
+        width: 270px;
+    }
+    @include min(596px){
+        width: 440px;
+    }
+    @include min(1200px){
+        width: 100%;
+    }
+}
+.error-desc{ 
+    font-weight: bold;
+    color: $base;
+    text-align: center;
+    @include min(320px){
+        font-size: 17px;
+        margin: 31.2px 0;
+    }
+    @include min(596px){
+        font-size: 21px;
+        margin: 31.2px 0 35px 0;
+    }
+    @include min(1200px){
+        font-size: 32px;
+        margin: 31.2px 0 40px 0;
+    }
+}
+.left-error{
+    color: $wht;
+    font-weight: 600;
+    padding: 13.13px 18px;    
+    @include min(320px){
+        font-size: 14px; 
+        margin: 0 0 15px;
+        width: 280px;
+        height: 40px;
+        &:last-child{
+            margin: 0;
+        }
+    }
+    @include min(596px){
+        margin: 0 25px 0 0;
+        width: 250px;
+        height: 45px; 
+    }
+    @include min(1200px){
+        font-size: 16px; 
+        margin: 0 37px 0;
+        width: 311px;
+        height: 50px;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+}
+.copyright{
+    font-size: 12px;
+    line-height: 1.25;
+    @include min(320px){
+        margin: 35px 0 15px 0;
+        text-align: center;
+    }
+    @include min(596px){
+        margin: 35px 0 20px 0;
+        text-align: left;
+    }
+    @include min(1200px){
+        margin: 35px 0 28px 0;
+    }
+    .underlined{
+        text-decoration: underline;
+    }
+    .icobnd-heart-outline{
+        color: $red3st;
+    }
+}
+
+    .section-error-content{
+        min-height: 100vh;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+
+
+

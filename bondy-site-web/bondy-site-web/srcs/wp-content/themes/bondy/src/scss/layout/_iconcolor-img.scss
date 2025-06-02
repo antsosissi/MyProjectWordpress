@@ -1,0 +1,184 @@
+.icon-svgcolor {
+  display: inline-block;
+  line-height: 100%;
+  text-align: center;
+  width: 64px;
+  @include min(1280px) {
+    width: 104px;
+  }
+  img {
+    height: auto;
+    max-width: 100%;
+  }
+}
+
+.thermometer-color {
+  img {
+    width: 25px;
+    @include min(1024px) {
+      width: 30px;
+      height: 60px;
+    }
+    @include min(1280px) {
+      width: 40px;
+      height: 80px;
+    }
+  }
+}
+.erosion-color {
+  img {
+    width: 50px;
+    @include min(1024px) {
+      width: 64px;
+      height: 50px;
+    }
+    @include min(1280px) {
+      width: 87px;
+      height: 67px;
+    }
+  }
+}
+.biodiversite-color {
+  img {
+    width: 50px;
+    @include min(1024px) {
+      width: 64px;
+      height: 64px;
+    }
+    @include min(1280px) {
+      width: 84px;
+      height: 84px;
+    }
+  }
+}
+.emancipation-color {
+  img {
+    width: 50px;
+    @include min(1024px) {
+      width: 68px;
+      height: 56px;
+    }
+    @include min(1280px) {
+      width: 90px;
+      height: 74px;
+    }
+  }
+}
+.entreprenariat-color {
+  img {
+    width: 48px;
+    @include min(1024px) {
+      width: 60px;
+      height: 64px;
+    }
+    @include min(1280px) {
+      width: 80px;
+      height: 84px;
+    }
+  }
+}
+
+.evaluation-color {
+  
+  img {
+    width: 62px;
+    @include min(1280px) {
+      width: 104px;
+    }
+  }
+}
+.conception-color {
+  img {
+    width: 64px;
+    @include min(1280px) {
+      width: 104px;
+    }
+  }
+}
+.realisation-color {
+  img {
+    width: 54px;
+    @include min(1280px) {
+      width: 86px;
+    }
+  }
+}
+.communication-color {
+  img {
+    width: 64px;
+    @include min(1280px) {
+      width: 104px;
+    }
+  }
+}
+
+.croissance-color {
+  img {
+    width: 64px;
+    @include min(1280px) {
+      width: 72px;
+    }
+  }
+}
+.dvlpt-durable-color {
+  img {
+    width: 64px;
+    @include min(1280px) {
+      width: 74px;
+    }
+  }
+}
+.sensibilisation-color {
+  img {
+    width: 64px;
+    @include min(1280px) {
+      width: 79px;
+    }
+  }
+}
+.fournisseurEthique-color {
+  img {
+    width: 64px;
+    @include min(1280px) {
+      width: 79px;
+    }
+  }
+}
+.potagerEntreprise-color {
+  img {
+    width: 56px;
+    @include min(1280px) {
+      width: 66px;
+    }
+  }
+}
+.foretUrbaine-color {
+  img {
+    width: 64px;
+    @include min(1280px) {
+      width: 74px;
+    }
+  }
+}
+.parcAgroforestier-color {
+  img {
+    width: 62px;
+    @include min(1280px) {
+      width: 72px;
+    }
+  }
+}
+
+.phone-screen-color, 
+.solution-owner-color, 
+.realisation-color, 
+.recolte-color {
+  img {
+    @include min(1024px) {
+      height: 64px;
+    }
+    @include min(1280px) {
+      height: 110px;
+    }
+  }
+}

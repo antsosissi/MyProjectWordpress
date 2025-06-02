@@ -1,0 +1,60 @@
+@import "layout/variables";
+@import "layout/mixins";
+
+// library css
+@import "lib/animate.min";
+@import "lib/owl.carousel.min";
+@import "lib/custom-select";
+@import "lib/jquery.fancybox";
+@import "lib/responsive-tabs";
+@import "lib/jquery.mCustomScrollbar.min";
+@import "bootstrap";
+
+
+// fonts
+@import "layout/fonts";
+
+// icons fonts
+@import "layout/iconcolor-img";
+@import "layout/iconBondy";
+@import "layout/iconBondy-color";
+
+// styles
+@import "layout/common";
+@import "layout/buttons";
+@import "layout/forms";
+
+@import "layout/prehome";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/home";
+@import "layout/fallingLeaves";
+@import "layout/popup";
+@import "layout/favoris";
+@import "layout/notre-histoire";
+@import "layout/pilier";
+@import "layout/partner";
+@import "layout/banniere";
+@import "layout/breadcrumb";
+@import "layout/_decouvez-valeur";
+@import "layout/_fallingLeaves";
+@import "layout/_scrolltop";
+@import "layout/_loader";
+@import "layout/_ieobjectfit";
+@import "layout/_projet-partenaire";
+@import "layout/_404page";
+@import "layout/_contexte-projets";
+@import "layout/_rte";
+@import "layout/mentions-legales";
+@import "layout/_rte";
+@import "layout/projets";
+@import "layout/list-especes-arbres";
+@import "layout/fiche-projet";
+@import "layout/photo-gallery";
+@import "layout/particulier";
+@import "layout/tabs-accordion";
+@import "layout/list-actualite";
+@import "layout/contacts";
+@import "layout/detail-actus";
+
+@import "layout/entreprises";
