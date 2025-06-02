@@ -1,0 +1,265 @@
+.navTabsAccordion-bloc {
+  .nav-tabs {
+    @include max(1023px) {
+      display: none;
+    }
+    @include min(1024px) {
+      align-items: center;
+      border: none;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    @include min(1280px) {
+      margin-bottom: 30px;
+    }
+  }
+  .nav-item {
+    padding: 0 12px 20px;
+    @include min(1280px) {
+      padding: 0 18px 30px;
+    }
+  }
+  .nav-link {
+    background-color: #fff;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 1px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, .16);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    //height: 175px;
+    padding: 15px 25px 40px;
+    position: relative;
+    text-align: center;
+    width: 246px;
+    z-index: 0;
+    @include min(1600px) {
+      //height: 195px;
+      width: 380px;
+      padding: 20px 35px 60px;
+    }
+    > i {
+      color: $green;
+      display: inline-block;
+      font-size: 64px;
+      line-height: 100%;
+      margin-bottom: 20px;
+      @include min(1600px) {
+        font-size: 100px;
+        margin-bottom: 30px;
+      }
+    }
+    > .icon-img {
+      display: inline-block;
+      height: 72px;
+      width: 83px;
+      img {
+        display: inline-block;
+        object-fit: cover;
+        object-position: center top;
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .txt {
+      color: $base;
+      display: inline-block;
+      font-size: 14px;
+      line-height: 18px;
+      height: 56px;
+      margin-bottom: 13px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      @include min(1600px) {
+        font-size: 20px;
+        line-height: 25px;
+        margin-bottom: 20px;
+      }
+    }
+    .text-vert {
+      color: $green;
+    }
+    .angle {
+      position: absolute;
+      left: 50%;
+      bottom: 10px;
+      height: 20px;
+      transform: translateX(-50%);
+      width: 23px;
+      overflow: hidden;
+      transition: all .25s ease-in-out;
+      z-index: 1;
+      @include min(1280px) {
+        height: 31px;
+        width: 35px;
+      }
+      i {
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .icobnd-chevron-down {
+        color: $grey94;
+        font-size: 14px;
+        opacity: 1;
+        transition: all .25s ease;
+        visibility: visible;
+        vertical-align: bottom;
+        bottom: 0;
+        @include min(1280px) {
+          font-size: 20px;
+        }
+      }
+      .icobnd-angle-down {
+        color: #fff;
+        font-size: 22px;
+        opacity: 0;
+        vertical-align: middle;
+        visibility: hidden;
+        transition: all .5s ease;
+        top: 0;
+        @include min(1280px) {
+          font-size: 35px;
+        }
+      }
+    }
+    &.active {
+      border-color: $greyE2;
+      box-shadow: 0px 0px 36px rgba(0, 0, 0, .2);
+      .angle {
+        bottom: -15px;
+        @include min(1280px) {
+          bottom: -25px;
+        }
+        .icobnd-chevron-down {
+          opacity: 0;
+          visibility: hidden;
+        }
+        .icobnd-angle-down {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  .tab-content {
+    .tab-pane {
+      @include max(1023px) {
+        display: block !important;
+        margin-bottom: 10px;
+        opacity: 1;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .card-header {
+      background: none;
+      border: none;
+      padding: 0;
+      @include min(1024px) {
+        display: none;
+      }
+    }
+    .card-title {
+      margin-bottom: 0;
+    }
+    .card-title-link {
+        background-color: #fff;
+        border: 1px solid $greyE2;
+        border-radius: 5px;
+        color: $base;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        line-height: 18px;
+        padding: 6px 10px 7px 5px;
+        width: 100%;
+        &:hover {
+          text-decoration: none;
+        }
+        i {
+          color: $green;
+          font-size: 40px;
+          display: inline-block;
+          margin-right: 8px;
+        }
+        > .icon-img {
+          display: inline-block;
+          height: auto;
+          margin-bottom: 5px;
+          margin-top: 5px;
+          width: 40px;
+          img {
+            display: inline-block;
+            object-fit: cover;
+            object-position: center top;
+            height: 100%;
+            width: 100%;
+          }
+        }
+        span:not(.circle-toggle), .txt {
+          flex: 1 1 100%;
+        }
+
+        &[aria-expanded="true"] {
+          .txt {
+            color: $green;
+          }
+          .circle-toggle {
+            .vertical {
+              height: 0;
+            }
+          }
+        }
+    }
+    .circle-toggle {
+      background-color: $green;
+      border-radius: 50%;
+      display: inline-block;
+      height: 20px;
+      min-width: 20px;
+      position: relative;
+      width: 20px;
+      z-index: 0;
+      @include min(1024px) {
+        display: none;
+      }
+      span {
+        background-color: #fff;
+        border-radius: 2px;
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all .25s ease;
+        z-index: 1;
+      }
+      .horizontal {
+        height: 3px;
+        width: 15px;
+      }
+      .vertical {
+        height: 15px;
+        width: 3px;
+      }
+    }
+    .collapse {
+    }
+    .card-body {
+      padding: 30px 0;
+      @include min(1024px) {
+        padding: 0;
+      }
+    }
+    .collapse:not(.show) {
+      @include min(1024px) {
+        display: block;
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+.mentions-legales{  
+    @include min(320px){
+        margin: 40px 0 35px 0;
+    }
+    @include min(1024px){
+        margin: 50px 0;
+    }
+    @include min(1600px){
+        margin: 90px 0 70px 0;
+    }
+}
+.main-title{
+    color: $green;
+    @include min(320px){
+        margin-bottom: 30px;
+    }
+    @include min(1024px){
+        margin-bottom: 40px;
+    }
+    @include min(1600px){
+        margin-bottom: 50px;
+    }
+}
+p{
+    color: $base;
+}
+.mentions-content{
+    display: block;
+    margin: auto;
+    h4{  
+        @include min(320px){
+            margin-bottom: 7px;
+        }
+        @include min(1024px){
+            margin-bottom: 11px;
+        }
+        @include min(1600px){
+            margin-bottom: 15px;
+        }
+    }
+    p{
+        @include min(320px){
+            margin-bottom: 15px;
+        }
+        @include min(1024px){
+            margin-bottom: 22px;
+        }
+        @include min(1600px){
+            margin-bottom: 30px;
+        }
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+

@@ -1,0 +1,53 @@
+.titre-page-bloc {
+    padding: 30px 0;
+    @include min(1024px) {
+        padding: 40px 0;
+    }
+    @include min(1600px) {
+        padding: 60px 0 50px;
+    }
+    &.titre-quiSommeNous {
+        // padding: 30px 0;
+        // @include min(1024px) {
+        //     padding: 40px 0;
+        // }
+        // @include min(1600px) {
+        //     padding: 60px 0 50px;
+        // }
+    }
+    .titre-bloc {
+        padding-bottom: 15px;
+        padding-top: 0px;
+        margin-bottom: 0px;
+        @include min(1024px) {
+            padding-bottom: 30px;
+            padding-top: 40px;
+            margin-bottom: 0px;
+        }
+        @include min(1600px) {
+            padding-bottom: 30px;
+            padding-top: 50px;
+            margin-bottom: 0px;
+        }
+    }
+    .chapo-txt {
+        p {
+            font-size: 12px;
+            line-height: 18px;
+            margin-bottom: 10px;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+            @include min(1024px) {
+                font-size: 14px;
+                line-height: 20px;
+            }
+            @include min(1600px) {
+                font-size: 16px;
+                line-height: 25px;
+            }
+        }
+    }
+
+}
+

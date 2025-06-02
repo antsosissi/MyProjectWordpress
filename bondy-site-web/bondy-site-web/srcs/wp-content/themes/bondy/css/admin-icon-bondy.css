@@ -1,0 +1,224 @@
+@font-face { font-family: 'icobondy'; src: url(../src/fonts/ico-bondy/icobondy.eot?ypdgag); src: url(../src/fonts/ico-bondy/icobondy.eot?ypdgag#iefix) format("embedded-opentype"), url(../src/fonts/ico-bondy/icobondy.ttf?ypdgag) format("truetype"), url(../src/fonts/ico-bondy/icobondy.woff?ypdgag) format("woff"), url(../src/fonts/ico-bondy/icobondy.svg?ypdgag#icobondy) format("svg"); font-weight: normal; font-style: normal; font-display: block; }
+
+[class^="icobnd-"], [class*=" icobnd-"] { /* use !important to prevent issues with browser extensions that change fonts */ font-family: 'icobondy' !important; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; /* Better Font Rendering =========== */ -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+.icobnd-home:before { content: "\e900"; }
+
+.icobnd-mail:before { content: "\e901"; }
+
+.icobnd-link-social:before { content: "\e902"; }
+
+.icobnd-bag:before { content: "\e903"; }
+
+.icobnd-check:before { content: "\e904"; }
+
+.icobnd-check-circle:before { content: "\e905"; }
+
+.icobnd-progression-circle:before { content: "\e906"; }
+
+.icobnd-star-outline:before { content: "\e907"; }
+
+.icobnd-star:before { content: "\e908"; }
+
+.icobnd-scroll:before { content: "\e909"; }
+
+.icobnd-quote-open:before { content: "\e90a"; }
+
+.icobnd-info-square:before { content: "\e90b"; }
+
+.icobnd-warning:before { content: "\e90c"; }
+
+.icobnd-warning-circle:before { content: "\e90d"; }
+
+.icobnd-plus:before { content: "\e90e"; }
+
+.icobnd-minus:before { content: "\e90f"; }
+
+.icobnd-close:before { content: "\e910"; }
+
+.icobnd-mosaic:before { content: "\e911"; }
+
+.icobnd-enlarge:before { content: "\e912"; }
+
+.icobnd-link-external:before { content: "\e913"; }
+
+.icobnd-angle-down:before { content: "\e914"; }
+
+.icobnd-arrow-up-rounded:before { content: "\e915"; }
+
+.icobnd-arrow-down-rounded:before { content: "\e916"; }
+
+.icobnd-arrow-left-rounded:before { content: "\e917"; }
+
+.icobnd-arrow-right-rounded:before { content: "\e918"; }
+
+.icobnd-chevron-top:before { content: "\e919"; }
+
+.icobnd-chevron-down:before { content: "\e91a"; }
+
+.icobnd-chevron-left:before { content: "\e91b"; }
+
+.icobnd-chevron-right:before { content: "\e91c"; }
+
+.icobnd-separator:before { content: "\e91d"; }
+
+.icobnd-arrow-dotted:before { content: "\e91e"; }
+
+.icobnd-arrow-dotted-2:before { content: "\e91f"; }
+
+.icobnd-cycles-water:before { content: "\e920"; }
+
+.icobnd-puits-carbone:before { content: "\e921"; }
+
+.icobnd-erosion:before { content: "\e922"; }
+
+.icobnd-fertility:before { content: "\e923"; }
+
+.icobnd-maki:before { content: "\e924"; }
+
+.icobnd-climat-urban:before { content: "\e925"; }
+
+.icobnd-thermometer:before { content: "\e926"; }
+
+.icobnd-catastroph:before { content: "\e927"; }
+
+.icobnd-vegetaliser:before { content: "\e928"; }
+
+.icobnd-apple-2:before { content: "\e929"; }
+
+.icobnd-apple:before { content: "\e92a"; }
+
+.icobnd-tree_money:before { content: "\e92b"; }
+
+.icobnd-airplane:before { content: "\e92c"; }
+
+.icobnd-firewood:before { content: "\e92d"; }
+
+.icobnd-hand-fruit:before { content: "\e92e"; }
+
+.icobnd-medicinal-vertue:before { content: "\e92f"; }
+
+.icobnd-builder:before { content: "\e930"; }
+
+.icobnd-sol-improvement:before { content: "\e931"; }
+
+.icobnd-tree-up:before { content: "\e932"; }
+
+.icobnd-construction-tree:before { content: "\e933"; }
+
+.icobnd-shading-tree:before { content: "\e934"; }
+
+.icobnd-noforest:before { content: "\e935"; }
+
+.icobnd-leaves:before { content: "\e936"; }
+
+.icobnd-wood:before { content: "\e937"; }
+
+.icobnd-bark-tree:before { content: "\e938"; }
+
+.icobnd-flower:before { content: "\e939"; }
+
+.icobnd-seeds:before { content: "\e93a"; }
+
+.icobnd-fruits-2:before { content: "\e93b"; }
+
+.icobnd-silkworm:before { content: "\e93c"; }
+
+.icobnd-environnemental:before { content: "\e93d"; }
+
+.icobnd-economique:before { content: "\e93e"; }
+
+.icobnd-fruits:before { content: "\e93f"; }
+
+.icobnd-audace:before { content: "\e940"; }
+
+.icobnd-exigence:before { content: "\e941"; }
+
+.icobnd-verdoyant:before { content: "\e942"; }
+
+.icobnd-revenu:before { content: "\e943"; }
+
+.icobnd-automatisation:before { content: "\e944"; }
+
+.icobnd-construction:before { content: "\e945"; }
+
+.icobnd-chain:before { content: "\e946"; }
+
+.icobnd-waters:before { content: "\e947"; }
+
+.icobnd-print-ecological:before { content: "\e948"; }
+
+.icobnd-combine-products:before { content: "\e949"; }
+
+.icobnd-develop-land:before { content: "\e94a"; }
+
+.icobnd-optimize-productivity:before { content: "\e94b"; }
+
+.icobnd-solution-owner:before { content: "\e94c"; }
+
+.icobnd-volunteers:before { content: "\e94d"; }
+
+.icobnd-trees-2:before { content: "\e94e"; }
+
+.icobnd-facebook:before { content: "\e953"; }
+
+.icobnd-instagram:before { content: "\e950"; }
+
+.icobnd-linkedin:before { content: "\e951"; }
+
+.icobnd-youtube:before { content: "\e952"; }
+
+.icobnd-heart:before { content: "\e94f"; }
+
+[class^="icobnd-"], [class*=" icobnd-"] {
+    display: inline-block;
+}
+.acf-input li label > input {
+    vertical-align: -8px;
+}
+.acf-input li label > i {
+    color: #0fcb8f;
+    font-size: 26px;
+    margin: 0 5px;
+    vertical-align: text-bottom;
+}
+
+/* icon svg */
+.icon-svgcolor { display: inline-block; line-height: 100%; text-align: center; width: 40px; }
+
+.icon-svgcolor img { height: auto; max-width: 100%; }
+
+.thermometer-color img { width: 40px; height: 40px;}
+
+.erosion-color img { width: 40px; }
+
+.biodiversite-color img { width: 40px; }
+
+.emancipation-color img { width: 40px; }
+
+.entreprenariat-color img { width: 40px; }
+
+.evaluation-color img { width: 40px; }
+
+.conception-color img { width: 40px; }
+
+.realisation-color img { width: 40px; }
+
+.communication-color img { width: 40px; }
+
+.croissance-color img { width: 40px; }
+
+.dvlpt-durable-color img { width: 40px; }
+
+.sensibilisation-color img { width: 40px; }
+
+.fournisseurEthique-color img { width: 40px; }
+
+.potagerEntreprise-color img { width: 40px; }
+
+.foretUrbaine-color img { width: 40px; }
+
+.parcAgroforestier-color img { width: 40px; }
+
+.phone-screen-color img, .solution-owner-color img, .realisation-color img, .recolte-color img { width: 40px; }
+

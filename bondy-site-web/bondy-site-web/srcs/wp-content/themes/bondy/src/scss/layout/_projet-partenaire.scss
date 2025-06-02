@@ -1,0 +1,43 @@
+.half-partenaire-slider{
+    padding: 30px 0px;
+    @include min(1024px){
+        padding: 50px 0px;
+    }
+    .about-us-partner {
+        padding: 0px;
+        .partner-slider{
+            padding: 7px 0 0;
+            @include min(1024px){   
+                padding: 7px 35px 5px;
+            }
+            .owl-stage-outer {
+                margin-left: 0px;
+                margin-right: 0px;
+            }
+            .partner-item {
+                padding: 10px;
+                @include min(1280px){   
+                    padding: 15px;
+                }
+
+            }
+        }
+    }
+    .sous-titre-content{
+        .sous-titre-bloc, .intros-text p{
+            font-size: 12px;
+            line-height: 15px;
+            font-weight: 400;
+            @include min(1024px){
+                font-size: 14px;
+                line-height: 18px;
+                padding-right: 15px;
+            }
+            @include min(1600px){
+                font-size: 16px;
+                line-height: 25px;
+            }
+        }
+    }
+    
+}

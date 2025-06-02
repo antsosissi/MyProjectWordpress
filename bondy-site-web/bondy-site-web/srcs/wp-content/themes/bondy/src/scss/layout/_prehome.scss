@@ -1,0 +1,187 @@
+.pre-home {
+  margin-top: 54px;
+  height: 226px;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  @include min(1024px) {
+    height: calc(var(--vh, 1vh) * 100);
+    height: 100vh;
+    min-height: 640px;
+    margin-top: 0;
+  }
+  
+  .big-txt {
+    opacity: 0;
+    margin-top: 30px;
+    transition: all 0.5s ease-in-out;
+    color: #fff;
+    font-family: $qs;
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 40px;
+    left: 15px;
+    line-height: 125%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-shadow: 0px 3px 6px rgba(0, 0, 0, .16);
+    text-transform: uppercase;
+    z-index: 10;
+    @include min(1024px) {
+      font-size: 90px;
+      line-height: 110px;
+      left: 97px;
+    }
+    @include min(1600px) {
+      font-size: 142px;
+      line-height: 136px;
+      left: 150px;
+    }
+  }
+  figure {
+    height: inherit;
+    margin: 0;
+
+    img {
+      display: block;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      width: 100%;
+      filter: grayscale(1);
+    }
+    &.mask-container{
+      position: absolute;
+      z-index: 5;
+      img{
+        filter: grayscale(0);
+      }
+    }
+  }
+  @include max(1024px) {
+    image.uncolored{
+      display: none;
+    }
+    mask {display: none;}
+  }
+
+  /* smartphones, touchscreens */
+  @media (hover: none) and (pointer: coarse) {
+    image.uncolored, circle{
+      display: none;
+    }
+    mask {display: none;}
+  }
+  .scroll-wrap {
+    color: #fff;
+    line-height: 100%;
+    margin: 0;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 10;
+
+    @include max(1023px) {
+      display: none;
+    }
+    label, a, i, span {
+      display: block;
+      text-align: inherit;
+      transition: all 0.5s ease-in-out;
+    }
+    label {
+      position: relative;
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 40px;
+      margin-bottom: 15px;
+      opacity: 0;
+      top: -10px;
+      @include min(1024px) {
+        font-size: 20px;
+        line-height: 25px;
+      }
+      @include min(1600px) {
+        font-size: 32px;
+      }
+    }
+
+    a {
+      position: relative;
+      color: inherit;
+      opacity: 0;
+      top: 15px;
+      text-decoration: none !important;
+    }
+    i {
+      margin-bottom: 10px;
+
+      @include min(1024px) {
+        font-size: 35px;
+      }
+
+      @include min(1600px) {
+        font-size: 50px;
+      }
+    }
+
+    .scroll-txt {
+      display: block;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 15px;
+      text-align: center;
+    }
+  }
+  &.loaded {
+    .big-txt {
+      opacity: 1;
+      margin-top: 0;
+      transition: all 1.5s ease-in-out;
+    }
+    .scroll-wrap {
+      label,
+      a {
+        top: 0;
+        opacity: 1;
+        transition: all 0.5s 1s ease-in-out;
+      }
+    }
+  }
+}
+
+/* clipping mask */
+
+:root {
+  --clip-position: center;
+}
+
+.mask-container {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+@supports (-webkit-clip-path: circle(200px at center)) or (clip-path: circle(200px at center)) {
+
+  .mask-container {
+    display: block;
+  }
+  
+  .mask-container img {
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+    -webkit-clip-path: circle(200px at var(--clip-position) );
+    clip-path: circle(200px at var(--clip-position) );
+		backdrop-filter: blur(9px);
+  }
+  
+}
+

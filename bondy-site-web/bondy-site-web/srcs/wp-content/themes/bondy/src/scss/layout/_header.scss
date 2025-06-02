@@ -1,0 +1,449 @@
+
+.top-bar {
+  background-color: #fff;
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.16);
+  height: 55px;
+  line-height: 55px;
+  opacity: 1;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  transition: all .5s ease;
+  transform: translateY(0%);
+  z-index: 10; 
+  @include min(1024px) {
+    height: 65px;
+    line-height: 65px;
+    transition-delay: .25s;
+    display: none;
+  }
+  @include min(1600px) {
+    height: 110px;
+    line-height: 110px;
+    transition: all 0.4s ease;  
+    
+  }
+  &.restart {
+    @include min(1024px) {
+      transform: translateY(calc(-100% - 180px));
+    }
+  }
+  a {
+    display: inline-block;
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    line-height: 100%;
+    height: inherit;
+    position: relative;
+    z-index: 0;
+  }
+  .logo-bondy {
+    background-color: #fff;
+    border-radius: 0 0 5px 5px;
+    height: 54px;
+    transition: all 0.4s ease;
+    text-align: center;
+    padding: 10px 15px;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    @include min(1024px) {
+      box-shadow: 0px 3px 6px rgba(0,0,0,0.16);
+    }
+    .logotype1{
+      opacity: 0;
+      @include min(1024px) {  
+        opacity: 1;
+        transition: all 0.4s ease;
+      }
+    }
+    .logotype2{   
+      top: 10px;
+      opacity: 1;     
+      position: absolute;
+      left: 0;
+      @include min(1024px) {
+        opacity: 0;
+        width: 130px;
+      }
+      @include min(1600px) {
+        opacity: 0;
+        width: 200px;
+      }     
+    }
+    @include min(1024px) {
+      height: 107px;
+      left: 40px;
+      padding: 15px;
+    }
+    @include min(1600px) {
+      height: 180px;
+    }
+    &:before {
+      background-color: #fff;
+      content: "";
+      display: block;
+      height: 100%;
+      margin: 0 -5px;
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      z-index: 0;
+      @include min(1024px) {
+        height: calc(100% - 42px;);
+      }
+      @include min(1600px) {
+         height: calc(100% - 70px;);
+      }
+    }
+
+    img {
+      display: inline-block;
+      max-height: 34px;
+      position: relative;
+      z-index: 1;
+      @include min(1024px) {
+        max-height: 88px;
+      }
+      @include min(1600px) {
+        max-height: 150px;
+      }
+    }
+  }
+  &.sticky {      
+    @include min(1600px) {
+      height: 80px;
+      line-height: 80px;
+      transition: all 0.4s ease;
+    }
+    .logo-bondy {
+      height: 107px;
+      left: 40px;
+      padding: 15px;
+      box-shadow: none;
+      height: 100%;
+      
+      transition: all 0.4s ease;
+      .logotype1{
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: all 0.2s ease;
+      }  
+      .logotype2 {
+        top: 15px;
+        @media screen and (min-width: 1600px) {
+          top: 25px;
+        }
+        opacity: 1;
+        position: absolute;
+        transition: all 0.2s 0.2s  ease;
+        width: 180px;
+        @include min(1024px) {
+          width: 190px;
+        }
+        @include min(1280px) {
+          width: 210px;
+        }
+        @include min(1600px) {
+          width: 250px;
+        }
+      }
+    }
+  }
+  .favoris-link {
+    background-color: $red;
+    border-radius: 50%;
+    line-height: 32px;
+    height: 32px;
+    margin-left: 25px;
+    position: relative;
+    text-align: center;
+    margin-left: 30px;
+    min-width: 32px;
+    width: 32px;
+    z-index: 0;
+    order: 2;
+    @include min(1024px) {
+      margin-left: 30px;
+      order: 3;
+    }
+    @include min(1600px) {
+      line-height: 46px;
+      height: 50px;
+      min-width: 50px;
+      width: 50px;
+    }
+    i {
+      color: #fff;
+      display: inline-block;
+      font-size: 17px;
+      line-height: 100%;
+      vertical-align: middle;
+      @include min(1024px) {
+      }
+      @include min(1600px) {
+        font-size: 27px;
+      }
+    }
+    .badge {
+      background-color: $green;
+      border-radius: inherit;
+      box-shadow: 0px 3px 6px #00000042;
+      color: #fff;
+      display: inline-block;
+      font-size: 8px;
+      font-weight: 700;
+      line-height: 13px;
+      padding: 0;
+      position: absolute;
+      right: -2px; top: -2px;
+      width: 13px; height: 13px;
+      z-index: 1;
+      @include min(1024px) {
+        font-size: 10px;
+      }
+      @include min(1600px) {
+        right: -1px; top: 0;
+        height: 18px;
+        line-height: 18px;
+        width: 18px; 
+      }
+    }
+  }
+
+
+  .main-menu {
+    margin-left: 6px;
+    order: 3;
+    @include min(1024px) {
+      display: flex;
+      justify-content: flex-end;
+      height: 100%;
+      order: initial;
+      width: 100%;
+    }
+    &.open-menu {
+      .innerWrap-menu {
+        transform: translateX(0);
+      }
+    }
+    .navbar-toggler {
+      padding: 6px;
+      .navbar-toggler-icon {
+        position: relative;
+        height: 16px;
+        width: 18px;
+        z-index: 0;
+        span {
+          background-color: $grey94;
+          display: inline-block;
+          height: 1px;
+          width: inherit;
+          position: absolute;
+          left: 0;
+          &:first-child {
+            top: 8px;
+          }
+          &:last-child {
+            top: 100%;
+          }
+        }
+      }
+    }
+    .innerWrap-menu {
+      background-color: #fff;
+      border-left: 11px solid $green;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transition: all .25s ease;
+      transform: translateX(100%);
+      width: 270px;
+      z-index: 1;
+      @include min(1024px) {
+        background-color: transparent;
+        border-left: none;
+        position: static;
+        transform: none;
+        height: auto;
+        width: auto;
+      }
+    }
+    .menu-header {
+      border-bottom: 1px solid #e2e2e2;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: 54px;
+      justify-content: space-between;
+      padding: 0 20px 0 37px;
+      @include min(1024px) {
+        display: none;
+      }
+      .titreMenu {
+        color: $green;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 23px;
+        margin-bottom: 0;
+        text-transform: uppercase;
+      }
+      .close {
+        color: $grey94;
+        font-size: 16px;
+      }
+    }
+    .menu-list {
+      height: 100%;
+      line-height: 100%;
+      margin: 0;
+      padding: 15px 28px 20px 35px;
+      @include min(1024px) {
+        padding: 0;
+      }
+      .navbar-nav {
+        @include min(1024px) {
+          height: inherit;
+          flex-direction: row;
+          align-items: center;
+        }
+      }
+      li {
+        display: inline-block;
+        text-align: left;
+        margin-bottom: 5px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        @include min(1024px) {
+          text-align: center;
+          margin-bottom: 0;
+        }
+        @include min(1600px) {
+          padding: 0 15px;
+        }
+        &:first-child {
+          padding-left: 0;
+        }
+        a {
+          color: $base;
+          display: inline-block;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 23px;
+          padding: 5px 0;
+          width: 100%;
+          @include min(1024px) {
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 125%;
+            padding: 0 15px;
+          }
+          @include min(1600px) {
+            font-size: 20px;
+          }
+          &.active, &:hover {
+            text-decoration: none;
+          }
+          &.active {
+            color: $green;
+          }
+          &:hover {
+            @include min(1024px) {
+              color: $green;
+            }
+          }
+        }
+        i {
+          font-size: 20px;
+          @include min(1024px) {
+            font-size: 17px;
+          }
+          @include min(1600px) {
+            font-size: 29px;
+          }
+        }
+      }
+      
+      .nav-item {
+        position: relative;
+        &.show {
+          .dropdown-menu {
+            display: block;
+            top: 100%;
+            left: 0;
+            transform: none;
+          }
+        }
+        .dropdown-toggle {
+          position: relative;
+          z-index: 0;
+          &:after {
+            border: none;
+            color: $green;
+            content: "\e916";
+            font-family: 'icobondy';
+            font-size: 14px;
+            position: absolute;
+            right: 0;
+            top: 6px;
+            vertical-align: middle;
+            @include min(1024px) {
+              display: none;
+            }
+          }
+        }
+        .dropdown-menu {
+          border: none;
+          text-align: left;
+          @include min(1024px) {
+            border-radius: 5px;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+            margin-top: 8px;
+            min-width: 0;
+            padding: 5px 10px;
+            position: absolute;
+            left: 0; top: 100%;
+          }
+          &.show {
+            @include max(1023px) {
+              position: static !important;
+              transform: none !important;
+              margin-top: 0;
+              padding: 0 0 0 16px;
+            }
+          }
+        }
+        .dropdown-item {
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 18px;
+          padding: 0;
+          @include min(1024px) {
+            display: block;
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 25px;
+            text-align: left;
+            width: auto;
+          }
+          @include min(1600px) {
+            font-size: 16px;
+          }
+          &.active, &:active, &:hover, &:focus {
+            background-color: transparent;
+          }
+          a {
+            font-size: inherit;
+            @include min(1024px) {
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

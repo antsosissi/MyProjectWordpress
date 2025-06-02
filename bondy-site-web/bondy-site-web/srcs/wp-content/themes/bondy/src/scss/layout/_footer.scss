@@ -1,0 +1,467 @@
+footer {
+  background-color: #fff;
+  .footer-links {
+    background-color: #fff;
+    overflow-x: hidden;
+    max-width: 100%;
+    @include min(1024px) {
+      padding: 25px 0 20px;
+    }
+    @include min(1600px) {
+      padding: 60px 0 50px;
+    }
+    .container {
+      //padding-left: 0;
+      //padding-right: 0;
+    }
+    .row {
+      @include minMax(1024px, 1599px) {
+        margin-left: -8px;
+        margin-right: -8px;
+        .col, [class*="col-"] {
+          padding-left: 8px;
+          padding-right: 8px;
+        }
+      }
+    }
+    .d-1280-flex {
+      @include min(1280px) {
+        display: flex!important;
+      }
+    }
+    h2 {
+      color: $green;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 16px;
+      margin: 0;
+      padding: 0;
+      // padding: 0 15px;
+      position: relative;
+      width: 100%;
+      z-index: 0;
+      @include min(1024px) {
+        font-size: 14px;
+        margin-bottom: 8px;
+        //padding: 0;
+      }
+      @include min(1600px) {
+        font-size: 17px;
+        line-height: 35px;
+      }
+      
+      a {
+        color: $green;
+        display: flex;
+        align-items: center;
+        line-height: inherit;
+        justify-content: space-between;
+        padding: 7px 15px;
+        position: relative;
+        text-decoration: none;
+        width: 100%;
+        z-index: 0;
+        @include min(1024px) {
+          pointer-events: none;
+          padding: 0;
+        }
+        &:after {
+          content: "\e916";
+          font-family: "icobondy";
+          font-size: 14px;
+          color: $green;
+          line-height: 100%;
+          transition: all .25s ease-in-out;
+          transform: rotate(0deg);
+          @include min(1024px) {
+            display: none;
+          }
+        }
+        &[aria-expanded="true"] {
+          &:after {
+            transform: rotate(-180deg);
+          }
+        }
+      }
+    }
+    p {
+      color: $base;
+      font-size: 12px;
+      font-weight: 400;
+
+      @include min(1600px) {
+        font-size: 14px;
+      }
+      i {
+        color: $green;
+        font-size: inherit;
+        vertical-align: middle;
+      }
+    }
+
+    ul {
+      margin: 0;
+      padding: 0 0 10px;
+      @include min(1024px) {
+        padding: 0;
+      }
+      li {
+        color: $base;
+        list-style: none;
+        text-align: center;
+        @include min(1024px) {
+          text-align: left;
+        }
+        @include min(1600px) {
+        }
+        a {
+          color: inherit;
+          display: inline-block;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 15px;
+          padding: 5px 0;
+          text-decoration: none;
+          font-weight: 600;
+          @include min(1024px) {
+            font-size: 12px;
+            padding: 2px 0;
+          }
+          @include min(1600px) {
+            font-size: 14px;
+            line-height: 17px;
+            padding: 5px 0;
+          }
+          &:hover {
+            color: $red;
+            //font-weight: 500;
+            text-decoration: underline;
+          }
+        }
+        ul {
+          padding: 4px 0 0;
+          @include min(1024px) {
+            padding: 2px 0;
+            //padding: 4px 0 4px 15px;
+          }
+          @include min(1600px) {
+            //padding: 4px 0 4px 17px;
+          }
+        }
+        li {
+          position: relative;
+          z-index: 0;
+          @include min(1024px) {
+            padding-left: 13px;
+          }
+          @include min(1600px) {
+            padding-left: 17px;
+          }
+          &:before {
+            background: $base;
+            border-radius: 50%;
+            content: "";
+            display: none;
+            position: absolute;
+            left: 0; top: 8px;
+            @include min(1024px) {
+              display: inline-block;
+              height: 3px;
+              width: 3px;
+            }
+            @include min(1600px) {
+              height: 4px;
+              width: 4px;
+            }
+          }
+          a {
+            font-weight: 400;
+            line-height: 18px;
+            padding: 0;
+            vertical-align: text-top;
+            @include min(1024px) {
+              line-height: 17px;
+            }
+            @include min(1600px) {
+              line-height: 20px;
+            }
+          }
+        }
+      }
+    }
+    .item-content {
+      border-bottom: 1px solid #e2e2e2;
+      @include min(1024px) {
+        border-bottom: none;
+      }
+    }
+
+    .logo-footer {
+      margin-bottom: 0;
+      padding: 15px;
+      text-align: center;
+      @include min(1024px) {
+        padding: 0;
+        text-align: left;
+      }
+      img {
+        max-height: 40px;
+        @include min(1024px) {
+          max-height: 125px;
+        }
+        @include min(1600px) {
+          max-height: 210px;
+        }
+      }
+    }
+    .aPropos-bloc {
+      padding-bottom: 10px;
+      padding-top: 10px;
+      @include min(1024px) {
+        padding-bottom: 0;
+        padding-top: 2px;
+      }
+      @include min(1600px) {
+        //padding-top: 2px; 
+      }
+      p {
+        line-height: 30px;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+        @include min(1024px) {
+          line-height: 18px;
+        }
+        @include min(1600px) {
+          line-height: 30px;
+        }
+      }
+    }
+    .adresse-bloc {
+      padding: 0 0 10px;
+      @include min(1024px) {
+        padding-bottom: 0;
+      }
+      p {
+        margin-bottom: 0;
+        text-align: center;
+        white-space: nowrap;
+        @include min(1024px) {
+          line-height: 18px;
+          text-align: left;
+        }
+        @include min(1600px) {
+          line-height: 30px;
+        }
+        
+        
+      }
+    }
+    .reso-list {
+      padding-top: 20px;
+      a {
+        color: $green;
+        display: inline-block;
+        margin: 0 5px;
+        &:first-child {
+          margin-left: 0;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+        &:hover {
+          color: $red;
+          text-decoration: none;
+        }
+      }
+      i {
+        display: inline-block;
+        font-size: 18px;
+        vertical-align: baseline;
+      }
+    }
+    .footer-content {
+      padding: 0 15px;
+      //padding: 0 15px 10px;
+      @include min(1024px) {
+        padding: 0;
+      }
+      &.collapse:not(.show) {
+        @include min(1024px) {
+          display: block;
+        }
+      }
+    }
+  }
+  .footer-newsletter {
+    background-color: #cd5c5c;
+    background-image: url(#{$imgPath}herbe-320.png);
+    background-position: center bottom;
+    background-repeat: repeat-x;
+    background-size: auto 27px;
+    padding: 30px 15px 50px;
+    text-align: center;
+    @include min(1024px) {
+      background-image: url(#{$imgPath}herbe-1024.png);
+      background-size: auto 29px;
+      padding-top: 40px;
+      padding-bottom: 70px;
+    }
+    @include min(1600px) {
+      background-image: url(#{$imgPath}herbe-1920.png);
+      background-size: auto 57px;
+      padding-bottom: 145px;
+      padding-top: 70px;
+    }
+    .newsletter-bloc {
+      background-color: transparent;
+      padding: 0;
+
+    }
+    h2 {
+      color: #fff;
+      margin-bottom: 20px;
+      @include min(1024px) {
+        margin-bottom: 15px;
+      }
+      @include min(1600px) {
+        font-size: 35px;
+        line-height: 44px;
+        margin-bottom: 30px;
+      }
+    }
+    p {
+      text-align: inherit;
+      @include min(1024px) {
+        line-height: 25px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    .intro-txt {
+        margin-bottom: 20px;
+       @include min(1024px) {
+        margin-bottom: 30px;
+      }
+      @include min(1600px) {
+        margin-bottom: 40px;
+      }
+       p {
+        color: #fff;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+        @include min(1024px) {
+          line-height: 25px;
+        }
+        @include min(1600px) {
+          font-size: 14px;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+  .copyright-bloc {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 15px;
+    //height: 116px;
+    width: 100%;
+    @include min(1024px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    @include min(1600px) {
+      height: 50px;
+    }
+    p {
+      color: $base;
+      font-size: 10px;
+      line-height: 15px;
+      margin-bottom: 0;
+      text-align: center;
+      width: 100%;
+      @include min(1024px) {
+        font-size: 9px;
+        line-height: 29px;
+        text-align: left;
+        &:last-child {
+          text-align: right;
+        }
+      }
+      @include min(1600px) {
+        font-size: 14px;
+        line-height: 100%;
+      }
+    }
+    a {
+      color: inherit;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+    i {
+      color: $red3st;
+      font-size: 9px;
+      vertical-align: middle;
+      @include min(1600px) {
+        line-height: inherit;
+      }
+      @include min(1600px) {
+        font-size: 16px;
+      }
+    }
+    hr {
+      margin-bottom: 10px;
+      margin-top: 10px;
+      width: 100%;
+      @include min(1024px) {
+        display: none;
+      }
+    }
+  }
+}
+.form-newsletter {
+  .form-group {
+    &.no-footer{
+      .span-message-mail{
+        color: #ffffff;
+        @include min(1024px) {
+          color: $red4th;
+        }
+      }
+    }
+    @include max(1024px) {
+      .form-control {
+        margin-bottom: 25px;
+      }
+    }
+  }
+  .form-control {
+    padding: 14px 35px 13px 30px;
+  }
+  .span-message-mail {
+    width: 100%;
+    position: absolute;
+    top: 52px;
+    left: 0;
+    color: #ffffff;
+    font-weight: 500;
+    @include min(1600px) {
+     top: 85px;
+     font-size: 14px;
+     line-height: 30px;
+    }
+  }
+  input[type=email] {
+    max-width: 798px;
+    @include max(1024px) {
+      max-width: 100%;
+      width: 500px;
+      margin: 0 auto 25px;
+    }
+  }
+}

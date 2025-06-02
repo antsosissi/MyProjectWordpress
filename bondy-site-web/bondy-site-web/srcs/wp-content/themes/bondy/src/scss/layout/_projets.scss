@@ -1,0 +1,598 @@
+.list-projets-bloc {
+  padding-top: 0;
+  //padding-top: 15px;
+  padding-bottom: 25px;
+  @include min(1024px) {
+    //padding-top: 25px;
+    padding-bottom: 30px;
+  }
+  @include min(1600px) {
+    //padding-top: 40px;
+    padding-bottom: 50px;
+  }
+  .filter-bloc {
+    margin-bottom: 20px;
+    display: none;
+    @include min(1024px) {
+      margin-bottom: 30px;
+    }
+    h2 {
+      color: $base;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 18px;
+      margin-bottom: 15px;
+      @include min(1024px) {
+        font-size: 15px;
+        line-height: 20px;
+      }
+      @include min(1600px) {
+        font-size: 20px;
+        line-height: 25px;
+        margin-bottom: 17px;
+      }
+    }
+    label {
+      margin: 0;
+      white-space: nowrap;
+      @include max(1023px) {
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+    .filter-form {
+      @include min(768px) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+    .filter-status {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      @include min(768px) {
+        margin-bottom: 0;
+        justify-content: flex-start;
+      }
+      @include min(768px) {
+        margin-bottom: 0;
+        margin-right: 15px;
+      }
+      @include min(1024px) {
+        margin-right: 20px;
+      }
+      @include min(1600px) {
+        margin-right: 30px;
+      }
+      label {
+        margin: 0 5px 0 0;
+        @include min(480px) {
+          margin-right: 15px;
+        }
+        @include min(768px) {
+          margin-right: 5px;
+        }
+      }
+      .customSelect {
+        width: 174px;
+        @include min(480px) {
+          width: 50%;
+        }
+        @include min(768px) {
+          width: 140px;
+        }
+        @include min(1600px) {
+          width: 160px;
+        }
+        .custom-select {
+          width: 100%;
+        }
+      }
+    }
+    .filter-dates {
+      @include min(768px) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+    .date-item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      z-index: 0;
+       @include min(768px) {
+        justify-content: flex-start;
+       }
+       @include min(1024px) {
+        justify-content: flex-start;
+       }
+      label {
+        margin-right: 15px;
+        white-space: nowrap;
+        @include min(1024px) {
+          margin-right: 10px;
+        }
+        @include min(1600px) {
+          margin-right: 15px;
+        }
+      }
+      .field-group {
+        position: relative;
+        z-index: 0;
+        @include min(480px) {
+          width: 50%;
+        }
+        @include min(768px) {
+          width: auto;
+        }
+      }
+      .icon-calendar {
+        background-color: $green;
+        border-radius: 50%;
+        color: #fff;
+        cursor: pointer;
+        height: 31px;
+        line-height: 36px;
+        margin: 0;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        text-align: center;
+        pointer-events: none;
+        width: 31px;
+        i {
+          font-size: 18px;
+          @include min(1600px) {
+            font-size: 25px;
+          }
+        }
+        @include min(1024px) {
+          right: 3px;
+          top: 2px;
+        }
+        @include min(1600px) {
+          height: 43px;
+          line-height: 47px;
+          right: 4px;
+          top: 3px;
+          width: 43px;
+        }
+      }
+      input {
+        padding-right: 50px;
+        text-align: left;
+        width: 174px;    
+        cursor: pointer;
+        @include min(480px) {
+          width: 100%;
+        }
+        @include min(1024px) {
+          padding-right: 40px;
+          width: 132px;
+        }
+        @include min(1600px) {
+          padding-right: 70px;
+          width: 187px;
+        }
+      }
+    }
+    .debut-item {
+      margin-bottom: 15px;
+      @include min(768px) {
+        margin-bottom: 0;
+        margin-right: 10px;
+      }
+      @include min(1600px) {
+        margin-right: 15px;
+      }
+    }
+  }
+}
+.projet-list-simple {
+  margin: 0;
+  .infinite-loading-mask.anim {
+    min-height: 100% !important;
+  }
+  .projet_content_bondy {
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    @include min(576px) {
+      margin: 0 -8px;
+    }
+    @include min(1600px) {
+      margin: 0 -18px;
+    }
+    .item {
+      margin-bottom: 20px;
+      @include min(576px) {
+        flex-basis: 50%;
+        padding: 0 8px;
+        width: 50%;
+      }
+      @include min(800px) {
+        flex-basis: 33.33333%;
+        width: 33.33333%;
+      }
+      @include min(1280px) {
+        flex-basis: 25%;
+        margin-bottom: 30px;
+        width: 25%;
+      }
+       @include min(1600px) {
+        padding: 0 18px;
+        margin-bottom: 50px;
+       }
+    }
+    .inner-item {
+      position: relative;
+      z-index: 0;
+    }
+  }
+  .wrap-btn {
+    margin-bottom: 0;
+  }
+}
+.empty-projet-item{
+  font-size: 14px;
+  color: $base;
+  @include min(1024px){
+    font-size: 15px;
+  }
+  @include min(1600px){
+    font-size: 20px;
+  }
+}
+.especeArbre-bloc {
+  min-height: 485px;
+  padding: 30px 0;
+  @include min(1024px) {
+    padding: 40px 0 45px;
+    min-height: 400px;
+  }
+  @include min(1280px) {
+    padding: 70px 0;
+  }
+  .container {
+    position: relative;
+    @include max(1023px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  .big-image {
+    height: 75%;
+    margin: 0;
+    max-width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+    @include min(1024px) {
+      height: 100%;
+      max-width: 70%;
+    }
+    @include min(1280px) {
+      max-width: 71.15%;
+    }
+    img {
+      display: block;
+      margin: 0;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      width: 100%;
+    }
+  }
+  .info-content {
+    border-radius: 5px;
+    padding: 55% 15px 0;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    @include min(1024px) {
+      height: 100%;
+      padding: 35px 0;
+      width: auto;
+    }
+    @include min(1280px) {
+      padding: 62px 0;
+    }
+    .inner-content {
+      background-color: #fff;
+      border-radius: 5px;
+      padding: 10px 10px 30px;
+      position: relative;
+      z-index: 1;
+      @include min(1024px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 350px;
+        padding: 30px 20px;
+        width: 100%;
+      }
+      @include min(1280px) {
+        // min-height: 660px;
+        padding: 50px 100px;
+      }
+      &:after {
+        background-color: $green;
+        border-radius: 0 0 5px 5px;
+        content: "";
+        height: 8px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        @include min(1024px) {
+          height: 6px;
+        }
+        @include min(1600px) {
+          
+        }
+      }
+    }
+    h2 {
+      color: $green;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 24px;
+      margin: 0 0 10px;
+      text-align: center;
+      @include min(1024px) {
+        font-size: 40px;
+        line-height: 50px;
+        margin-bottom: 10px;
+        text-align: left;
+      }
+      @include min(1280px) {
+        font-size: 60px;
+        line-height: 75px;
+      }
+    }
+    .wrap-btn-decouvrir {
+      margin: 0;
+      padding-top: 10px;
+      text-align: center;
+      text-transform: uppercase;
+      @include min(1024px) {
+        padding-top: 15px;
+        
+      }
+      @include min(1280px) {
+        padding-top: 45px;
+      }
+      .btn {
+        font-size: 12px;
+        @include min(1024px) {
+          font-size: 16px;
+        }
+        @include min(1280px) {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .list-espece-arbre {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    @include min(1024px) {
+      margin: 0 -10px;
+    }
+    @include min(1280px) {
+        margin: 0 -28px;
+    }
+    .esp-arbre-item {
+      flex-basis: 100%;
+      padding: 10px 0;
+      width: 100%;
+      @include max(767px) {
+        &:nth-child(n + 2) {
+          display: none;
+        }
+      }
+      @include max(1279px) {
+        &:nth-child(n + 3) {
+          display: none;
+        }
+      }
+      @include min(1024px) {
+        flex-basis: 50%;
+        padding: 10px;
+        width: 50%;
+        &:nth-child(n + 5) {
+          display: none;
+        }
+      }
+      @include min(1280px) {
+        padding: 25px 0px;
+        width: 50%;
+      }
+    }
+    .inner-item {
+      display: flex;
+      flex-direction: row;
+      padding: 0px 0px;
+      @include min(1024px){
+        padding: 0px 0px;
+      }
+      @include min(1280px){
+        padding: 0px 10px;
+      }
+      @include min(1440px){
+        padding: 0px 20px;
+      }
+    }
+    .arbre-mntr {
+      border: 1px solid #e2e2e2;
+      border-radius: 5px;
+      flex-basis: 120px;
+      height: 120px;
+      margin: 0 8px 0 0;
+      min-width: 120px;
+      overflow: hidden;
+      width: 120px;
+      &:hover{
+          box-shadow: 0px 0px 6px rgba(0,0,0,0.16);
+      }
+      @include min(1024px) {
+        flex-basis: 108px;
+        height: 108px;
+        min-width: 108px;
+        width: 108px;
+      }
+      @include min(1280px) {
+        flex-basis: 120px;
+        height: 120px;
+        min-width: 120px;
+      }
+      @include min(1600px) {
+        flex-basis: 120px;
+        height: 120px;
+        margin: 0 10px 0 0;
+      }
+      a {
+        border-radius: inherit;
+        display: block;
+        height: inherit;
+        
+      }
+      img {
+        border-radius: inherit;
+        box-shadow: 0px 0px 6px rbga(0, 0, 0, .16);
+        display: block;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+      }
+    }
+    .infoArbre-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+    }
+    a{
+      text-decoration: none;
+      &:hover {
+        h3{
+          color: $green;
+        }
+      }
+      h3 {
+        color: $base;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 20px;
+        margin: 0 0 10px;
+        padding-bottom: 2px;
+        max-height: 40px;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        display: -webkit-box;
+        &:not(.tooltiped){pointer-events: none;}
+        @include min(1024px) {
+          margin-bottom: 5px;
+          line-height: 20px;
+        }
+        @include min(1280px) {
+          font-size: 16px;
+          line-height: 20px;
+          max-height: 50px;
+          margin-bottom: 5px;
+        }
+        @include min(1600px) {
+          font-size: 20px;
+          line-height: 25px;
+          max-height: 50px;
+          margin-bottom: 5px;
+        }
+      }
+    }
+    
+    .famille-icons {
+      border-top: 1px solid #e2e2e2;
+      font-size: 0;
+      margin: 0 0 8px;
+      padding: 8px 0 0 0px;
+      white-space: nowrap;
+      @include min(1024px) {
+        border-width: 1px 0 0;
+        margin-bottom: 0px;
+        padding-top: 8px;
+      }
+      &:empty {
+        display: none;
+      }
+      i {
+        background-color: $grey94;
+        border-radius: 50%;
+        color: #fff;
+        display: inline-block;
+        font-size: 15px;
+        height: 25px;
+        line-height: 25px;
+        margin: 0 5px;
+        text-align: center;
+        vertical-align: middle;
+        width: 25px;
+        @include min(1024px) {
+          font-size: 18px;
+          height: 30px;
+          line-height: 30px;
+          width: 30px;
+        }
+        &:hover {
+          background-color: $green;
+        }
+        &:first-of-type {
+          margin-left: 0;
+        }
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+    .wrap-link {
+      margin: 15px 0 0;
+      @include min(1024px) {
+        margin-top: 10px;
+      }
+      a, i, span{
+        display: inline-block;
+      }
+      a {
+        color: $grey94;
+        font-size: 12px;
+        line-height: 15px;
+        text-decoration: none;
+        &:hover {
+          color: $green;
+        }
+      }
+      span {
+        text-decoration: underline;
+        line-height: 100% ;
+        vertical-align: 1px;
+      }
+      i {
+        color: $green;
+        font-size: 12px;
+        margin-left: 10px;
+        vertical-align: -2px;
+      }
+    }
+  }
+}

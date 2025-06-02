@@ -1,0 +1,741 @@
+.fiche-projet{
+    margin-top: 60px;
+    @include min(1024px){
+        margin-top: 80px;
+    }
+    .especeArbre-bloc{
+        padding: 0px;
+    }
+    .espece_content_bondy{
+        display: flex!important;
+        flex-wrap: wrap;
+    }
+    .plus-detail-projet-item{
+        background: $wht;
+        border: 1px solid #e2e2e2;
+        border-top: 5px solid $green;
+        padding: 15px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
+    .plus-detail-projet-head{
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 18px;
+        color: $green!important;
+    }
+    .circle-toggle {
+        background-color: #0fcb8f;
+        border-radius: 50%;
+        display: inline-block;
+        height: 20px;
+        position: relative;
+        width: 20px;
+        z-index: 0;
+        @include min(1024px){
+            display: none;
+        }
+    }
+    .circle-toggle span {
+        background-color: #fff;
+        border-radius: 2px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        -webkit-transition: all .25s ease;
+        transition: all .25s ease;
+        z-index: 1;
+    }
+    .circle-toggle .horizontal {
+        height: 3px;
+        width: 15px;
+    }
+     .circle-toggle .vertical {
+        height: 15px;
+        width: 3px;
+    }
+    .plus-detail-projet-head[aria-expanded="true"] .circle-toggle .vertical {
+        height: 0;
+        width: 3px;
+    }
+    .bouton-prev-next{
+        display: none;
+        @include min(1024px){
+            display: flex;
+            align-self: center;
+            justify-content: flex-end;
+        }
+        span{
+            &:nth-child(1) a{
+                border-radius: 25px 0px 0px 25px;
+            }
+            &:nth-child(3) a{
+                border-radius: 0px 25px 25px 0px;
+            }
+            &.disabled{
+                opacity: 0.5;
+                a{
+                    cursor: default;
+                }
+            }
+            a{
+                display: flex;
+                height: 50px;
+                line-height: 50px;
+                width: 50px;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                color: $wht;
+                background: $green;
+                @include min(1024px){
+                    height: 35px;
+                    line-height: 35px;
+                    width: 35px;
+                }
+                @include min(1600px){
+                    height: 50px;
+                    line-height: 50px;
+                    width: 50px;
+                }
+                &:hover{
+                    background: #16B783;
+                }
+                &.bouton-tout-projet{
+                    background: #e2e2e2;
+                    margin: 0px 5px;
+                    &:hover{
+                        background: $greye2;
+                    }
+                }
+                i{
+
+                    @include min(1024px){
+                        font-size: 16px;
+                    }
+                    @include min(1600px){
+                        font-size: 20px;
+                    }
+                }
+                span{
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                    &:before{
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        width: 2px;
+                        height: 100%;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        background: $wht;
+                    }
+                    &:after{
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        width: 2px;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        transform: rotate(90deg) translate(-50%, -50%);
+                        background: $wht;
+                    }
+                }
+            }
+        }
+        
+    }
+    .detail-fiche-projet{
+        padding: 10px 0px;
+        @include min(1024px){
+            padding: 50px 0px;
+        }
+    }
+    .detail-fiche-projet-content{
+        display: flex;
+        flex-direction: column;
+        @include min(1024px) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .photo-gallery-content {
+            #full-photo {
+                figure {
+                    margin-bottom: 0px;
+                    @include min(1024px) {
+                        
+                    }
+                    @include min(1280px) {
+                    }
+                    @include min(1600px) {
+                    }
+                }
+                .item { 
+                    position: relative;
+                    @include min(1024px){
+                        padding-bottom: 30px;
+                    }
+                    @include min(1280px){
+                        padding-bottom: 40px;
+                    }
+                    @include min(1600px){
+                        padding-bottom: 50px;
+                    }
+                }
+                
+                .owl-dots {
+                    @include max(1023px) {
+                        display: none;
+                    }
+                }
+            }
+            .owl-nav{
+                bottom: -40px;
+            }
+            .legend{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 0 -5px;
+                padding: 10px 5px 10px 5px;
+                @include min(1024px){
+                    padding: 10px 5px 10px 5px;
+                    border-top: 1px solid #e2e2e2;
+                }
+                @include min(1600px){
+                    padding: 10px 5px 20px 5px; 
+                }
+                p {
+                    display: block;
+                    font-size: 16px;
+                    line-height: 25px;
+                    font-weight: bold;
+                    color: $greyf8;
+                    margin-bottom: 0px;
+                    @include min(1024px){
+                        font-size: 10px;
+                        line-height: 14px;
+                    }
+                    @include min(1600px){
+                        font-size: 16px;
+                        line-height: 25px;
+                    }
+                }
+            }
+            .mini-photo{
+                figure{
+                    width: 90px;
+                    height: 90px;
+                    @include min(1024pxpx){
+                        width: 80px;
+                        height: 80px;
+                    }
+                    @include min(1600px){
+                        width: 100px;
+                        height: 100px;
+                    }
+                }
+            }
+        }
+    }
+    .detail-fiche-projet-carrousel{
+        position: relative;
+        width: 100%;
+        order: 2;
+        margin-top: 20px;
+        &.empty-detail-fiche{
+            background: transparent;
+            border: none;
+        }
+        @include min(1024px){
+            width: 48%;
+            order: 1;
+            background: $wht;
+            border: 1px solid #e2e2e2;
+            border-radius: 5px;
+            padding: 26px 5px 5px 5px;
+            margin-top: 0px;
+        }
+        @include min(1280px){
+            padding: 36px 5px 5px 5px;
+        }
+        @include min(1600px){
+            padding: 46px 5px 5px 5px;
+        }
+        .zoom-photo{
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            i{
+                color: #e2e2e2;
+                @include min(1024px){
+                    font-size: 13px;
+                }
+                @include min(1280px){
+                    font-size: 20px;
+                }
+                @include min(1600px){
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+    .detail-fiche-projet-description{
+        width: 100%;
+        order: 1;
+        @include min(1024px){
+            width: 50%;
+            order:2;
+        }
+        h2{
+            font-size: 24px;
+            line-height: 30px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            @include min(1024px){
+                font-size: 20px;
+                line-height: 25px;
+                margin-bottom: 15px;
+            }
+            @include min(1600px){
+                font-size: 28px;
+                line-height: 35px;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+            
+        }
+        .localisation{
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: bold;
+            color: $green;
+            margin-bottom: 15px;
+            display: block;
+            @include min(1024px){
+                font-size: 16px;
+                line-height: 20px;
+                margin-bottom: 12px;
+            }
+            @include min(1600px){
+                font-size: 20px;
+                line-height: 25px;
+                margin-bottom: 12px;
+            }
+        }
+        .etat--partage{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 10px;
+            @include min(1024px){
+                padding-bottom: 20px;
+            }
+        }
+        .icon-status{
+            font-size: 11px;
+            line-height: 14px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 0px;
+            @include min(1024px){
+                font-size: 12px;
+                line-height: 15px;
+            }
+            @include min(1600px){
+                font-size: 12px;
+                line-height: 18px;
+            }
+            .icobnd-check-circle{
+                color: $green;
+                padding-right: 5px;
+            }
+            .icobnd-progression-circle{
+                color: $orange;
+                padding-right: 5px;
+            }
+        }
+        .partage{
+            display: flex;
+            align-items: center;
+            label{
+                font-size: 12px;
+                line-height: 15px;
+                color: $green;
+                margin-bottom: 0px;
+                padding-right: 5px;
+                @include min(1024px){
+                    font-size: 12px;
+                    line-height: 15px;
+                }
+                @include min(1600px){
+                    font-size: 14px;
+                    line-height: 18px;
+                }
+            }
+            ul{
+                list-style: none;
+                display: flex;
+                align-items: center;
+                padding-left: 0px;
+                margin: 0px;
+                li{
+                    padding: 0px 5px;
+                    a{
+                        text-decoration: none;
+                        color: $greye2;
+                        font-size: 16px;
+                        &:hover{
+                            color: $green;
+                        }
+                    }
+                }
+            }
+            .favoris-link{
+                position: relative;
+                width: 20px;
+                height: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: $wht;
+                background: $greye2;
+                border-radius: 50%;
+                position: relative;
+                margin-left: 5px;
+                font-size: 14px;
+                cursor: pointer;
+                @include min(1024px){
+                    width: 20px;
+                    height: 20px;
+                    font-size: 12px;
+                }
+                @include min(1600px){
+                    width: 26px;
+                    height: 26px;
+                    font-size: 14px;
+                }
+                i{
+                    // position: absolute;
+                }
+                &:hover{
+                    background: $green;
+                    color: $wht;
+                }
+                &:before{
+                    content: "";
+                    width: 1px;
+                    height: 100%;
+                    display: block;
+                    position: absolute;
+                    top: 0px;
+                    left: -5px;
+                    background: #e2e2e2;
+                }
+            }
+        }
+        .descriptif{
+            padding: 10px 0px 0px 0px;
+            border-top: 1px solid #e2e2e2;
+            @include min(1024px){
+                padding: 10px 0px;
+            }
+        }
+        .participez{
+            background: $green;
+            height: 103px;
+            position: relative;
+            @include max(1023px){
+                margin: 0px -15px;
+            }
+            @include min(1024px){
+                height: 64px;
+                background: $wht;
+                border: 1px solid #e2e2e2;
+                position: relative;
+            }
+            @include min(1600px){
+                background: $wht;
+                border: 1px solid #e2e2e2;
+                height: 90px;
+                position: relative;
+            }
+            .participez-content{
+                width: 100%;
+                height: 103px;
+                padding: 10px 0px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                @include min(1024px){
+                    background: $green;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 363px;
+                    height: 35px;
+                    padding: 19px 2px;
+                    border-radius: 25px;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+                @include min(1600px){
+                    width: 491px;
+                    height: 50px;
+                    padding: 26px 2px;
+                }
+                label{
+                    color: $wht;
+                    font-size: 18px;
+                    line-height: 30px;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 0px;
+                    @include min(1024px){
+                        font-size: 14px;
+                        line-height: 30px;
+                        width: 183px;
+                        height: 35px;
+                    }
+                    @include min(1600px){
+                        font-size: 18px;
+                        line-height: 30px;
+                        width: 233px;
+                        height: 50px;
+                    }
+                }
+                .lien-participez{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 258px;
+                    height: 45px;
+                    padding: 0px;
+                    border-radius: 25px;
+                    margin: 0 auto;
+                    @include min(1024px){
+                        width: 181px;
+                        height: 35px;
+                    }
+                    @include min(1600px){
+                        width: 258px;
+                        height: 50px;
+                    }
+                    a{
+                        height: 45px;
+                        width: 128px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        text-decoration: none;
+                        flex-direction: column;
+                        font-size: 18px;
+                        line-height: 20px;
+                        font-weight: 500;
+                        background: $wht;
+                        color: $green;
+                        @include min(1024px){
+                            width: 89px;
+                            height: 34px;
+                            font-size: 14px;
+                            line-height: 14px;
+                        }
+                        @include min(1600px){
+                            width: 127px;
+                            height: 48px;
+                            font-size: 18px;
+                            line-height: 20px;
+                        }
+                        &:hover{
+                            background: $green;
+                            color: $wht;
+                        }
+                        span{
+                            font-size: 10px;
+                            line-height: 15px;
+                            @include min(1024px){
+                                font-size: 10px;
+                                line-height: 10px;
+                            }
+                            @include min(1600px){
+                                font-size: 10px;
+                                line-height: 15px;
+                            }
+                        };
+                        &.entreprise{
+                            border-radius: 25px 0px 0px  25px;
+                        }
+                        &.particulier{
+                            border-radius: 0px 25px 25px  0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .projet-bouton{
+        margin-top: 10px;
+        @include max(1023px){
+            margin-bottom: 25px;
+        }
+        .btn-voirProjets{
+            width: 136px;
+            height: 35px;
+            margin: 0 auto;
+            font-size: 12px;
+            line-height: 30px;
+        }
+    }
+    .enParle-bloc {
+        padding-bottom: 30px;
+        padding-top: 30px;
+        @include min(1024px){
+            padding-bottom: 30px;
+            padding-top: 30px;
+        }
+        @include min(1600px){
+            padding-bottom: 50px;
+            padding-top: 50px;
+        }
+    }
+}
+.plus-detail-projet-bloc{
+    .container{
+        padding-bottom: 30px 0px;
+    }
+    hr{
+        margin: 0px;
+        @include max(1023px){
+            margin: 25px -15px 0px -15px
+        }
+    }
+    .plus-detail-projet-content{
+        margin-top: 20px;
+        p:last-of-type{
+            margin-bottom: 0px;
+        }
+    }
+    .especeArbre-bloc{
+        min-height: auto;
+        .rich-text{
+            p:last-of-type{
+                margin-bottom: 0px;
+            }
+        }
+        .list-espece-arbre{
+            margin: 0px;
+        }
+        .esp-arbre-item{
+            flex-basis: 100%;
+            width: 100%;
+            // display: block!important;
+            @include min(1024px){
+                flex-basis: 33.33333%;
+                width: 33.33333%;
+                padding-left: 0px;
+            }
+            @include min(1280px){
+                flex-basis: 25%;
+                width: 25%;
+            }
+            &:nth-child(n+3), &:nth-child(n+2){
+                display: inline-block;
+                @include max(1279px){
+                    display: inline-block;
+                }
+            }
+            .inner-item {
+                padding: 0px 20px 0px 0px;
+            }
+        }
+    }
+    .nav-tabs{
+        border: none;
+        .nav-link{
+            border: none;
+        }
+        .nav-item{
+            a{
+                text-decoration: none;
+                color: $base;
+                padding: 10px 20px;
+                border: 1px solid transparent;
+                border-top: 5px solid transparent;
+                border-bottom: 0px;
+                @include min(1024px){
+                    font-size: 17px;
+                    line-height: 21px;
+                }
+                @include min(1600px){
+                    font-size: 24px;
+                    line-height: 30px;
+                }
+                &.active{
+                    background: $wht;
+                    border-radius: 5px 5px 0px 0px;
+                    border: 1px solid #e2e2e2;
+                    border-top: 5px solid $green;
+                    border-bottom: 0px;
+                    font-weight: 600;
+                } 
+            }
+        }
+    }
+    .infinite-loading-mask.loading{
+        background: $wht;
+    }
+    .tab-content{
+        background: $wht;
+        border: 1px solid #e2e2e2;
+        padding: 20px 20px;
+        border-radius: 0px 0px 5px 5px;
+        @include min(1024px){
+            margin-bottom: 35px;
+        }
+        @include min(1600px){
+            margin-bottom: 45px;
+        }
+        .tab-pane{
+            p:last-of-type{
+                margin-bottom: 0px;
+            }
+        }
+    }
+    h3{
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        @include min(1024px){
+            font-size: 18px;
+            line-height: 23px;
+        }
+        @include min(1280px){
+            font-size: 24px;
+            line-height: 30px;
+        }
+        @include min(1600px){
+            font-size: 32px;
+            line-height: 40px;
+        }
+    }
+    .infinite-loading-mask.anim{
+        min-height: auto;
+        width: 100%;
+    }
+    #load-more{
+        display: none;
+    }
+}

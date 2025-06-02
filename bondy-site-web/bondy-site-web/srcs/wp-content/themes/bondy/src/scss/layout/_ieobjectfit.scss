@@ -1,0 +1,21 @@
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    /* IE10+ CSS styles go here */
+    .ieobjectfit {
+        img{
+            opacity: 0 !important;
+        }
+    }
+  }
+
+
+.ieobjectfit { 
+    &.compat-object-fit {
+        background-size: cover;
+        background-position: center center;
+        img { 
+            &__featured-image {
+                width: 120px; height: 120px; object-fit: cover;
+            }
+        }
+    }
+}
